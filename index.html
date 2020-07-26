@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SORA'S SITE</title>
+    <!-- pace -->
+    <script src="js/pace.js"></script>
+    <link rel="stylesheet" href="css/vendors/pace.css" />
+    <!-- swiper -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+
+    <!-- reset -->
+    <link rel="stylesheet" href="css/reset.css" />
+    <!-- fontAwsome -->
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.14.0/css/all.css"
+      integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc"
+      crossorigin="anonymous"
+    />
+    <!-- font-->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sawarabi+Mincho&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- style -->
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/mainimage.css" />
+    <!-- jQery -->
+    <script
+      type="text/javascript"
+      src="http://code.jquery.com/jquery-3.1.0.min.js"
+    ></script>
+  </head>
+  <body>
+    <div id="load_bg">
+      <!-- ヘッダー -->
+      <header id="header">
+        <div class="header_innner">
+          <h1 class="site_title">SORA'S SITE</h1>
+          <ul class="nav row">
+            <li><a href="#load_bg">HOME</a></li>
+            <li><a href="#about">ABOUT</a></li>
+            <li><a href="#skill">SKILE</a></li>
+            <li><a href="#work">WORK</a></li>
+            <li><a href="#contact">CONTACT</a></li>
+          </ul>
+          <div class="menu">
+            <div class="hum_btn">
+              <div class="hum_bar"></div>
+              <div class="hum_bar"></div>
+              <div class="hum_bar"></div>
+            </div>
+            <ul class="side_menu">
+              <li class="link_btn"><a href="#load_bg">HOME</a></li>
+              <li class="link_btn"><a href="#about">ABOUT</a></li>
+              <li class="link_btn"><a href="#skill">SKILE</a></li>
+              <li class="link_btn"><a href="#work">WORK</a></li>
+              <li class="link_btn"><a href="#contact">CONTACT</a></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <!-- メイン部分 -->
+      <main>
+        <!-- メインイメージ -->
+        <div id="global_container">
+          <div id="container">
+            <div id="content">
+              <div class="hero">
+                <!-- スライダーのメインコンテナの div 要素 -->
+                <div class="swiper-container">
+                  <!-- ラッパーの（スライドを囲む） div 要素 -->
+                  <div class="swiper-wrapper">
+                    <!-- それぞれのスライドの div 要素 -->
+                    <div class="swiper-slide">
+                      <div class="hero__title">SORA'S Portfolio</div>
+                      <img src="/portfolio/images/mainimage1.jpeg" alt="" />
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="hero__title">こんにちわ</div>
+                      <img src="/portfolio/images/mainimage2.jpeg" alt="" />
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="hero__title">西村空の自己紹介サイトです</div>
+                      <img src="/portfolio/images/mainimage3.jpeg" alt="" />
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="hero__title">ようこそ</div>
+                      <img src="/portfolio/images/mainimage4.jpeg" alt="" />
+                    </div>
+                  </div>
+                  <div class="hero__footer">
+                    <img
+                      class="hero__downarrow"
+                      src="/portfolio/images/arrow.svg"
+                      alt=""
+                    />
+                    <span class="hero__scrolltext">scroll</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <section id="about" class="container">
+          <h2 class="contents_title">ABOUT</h2>
+          <div class="row inner">
+            <div class="sora_iamge">
+              <img src="/portfolio/images/sora.jpeg" alt="" />
+            </div>
+            <div class="context">
+              <h4>こんにちは！西村空と申します！</h4>
+              <p>
+                鳥取県内にある商業高校を卒業後、公務員として5年間の勤務をしていました。ITがどんどん主流になっていく社会で、社会のため、会社のため、生活のために便利でより良いものを創っていきたいと思い、エンジニアを目指しています！将来は田舎でも働き、幸福度が高まるサービスを作っていきたいと考えています！どんな案件でも誠心誠意対応させていただき、必ずご依頼主様に満足いただけるサービスを提供いたします。<br />
+                <span>
+                  趣味：カメラ撮影、サイクリング
+                  <a href="favorite">カメラ作品を見る</a>
+                </span>
+              </p>
+            </div>
+          </div>
+        </section>
+        <!-- スキル部分 -->
+        <section id="skill" class="container">
+          <h2 class="contents_title">SKILL</h2>
+          <div class="row inner grid grid_skill">
+            <div class="skill_content">
+              <h5><i class="fas fa-fw fa-code"></i>HTML,CSS</h5>
+              <p>保守性の高いコードを心掛けでいます！日々成長しています！</p>
+            </div>
+            <div class="skill_content">
+              <h5><i class="fab fa-fw fa-js-square"></i>JavaScript</h5>
+              <p>
+                アニメーションを使ったりしています！jQeryもある程度使えます！
+              </p>
+            </div>
+            <div class="skill_content">
+              <h5><i class="fab fa-fw fa-php"></i>PHP</h5>
+              <p>
+                一番勉強時間が長いです。
+                データベース操作、セキュリティ関係はXSSやCSRF、SQLインジェクション対策などをします！
+              </p>
+            </div>
+            <div class="skill_content">
+              <h5><i class="fab fa-fw fa-laravel"></i>Laravel</h5>
+              <p>現在学習中です！ 勤怠システムを作成しています！</p>
+            </div>
+
+            <div class="skill_content">
+              <h5>
+                <i class="fas fa-fw fa-keyboard"></i>
+                etc..
+              </h5>
+              <p>
+                Github,git,Sass,MySQL,phpmyadmin,docker,Linux,vps,AWSなどを使用してきました！
+              </p>
+            </div>
+          </div>
+        </section>
+        <!-- ワーク部分 -->
+        <section id="work" class="container">
+          <h2 class="contents_title">WORK</h2>
+          <div class="inner row">
+            <div>
+              <h5>題名</h5>
+              <div>imageimage</div>
+            </div>
+            <div>
+              <h5>題名</h5>
+              <div>imageimage</div>
+            </div>
+          </div>
+        </section>
+        <!-- コンタクト部分 -->
+        <section id="contact" class="container">
+          <h2 class="contents_title">CONTACT</h2>
+          <div class="inner row">
+            <form method="post">
+              <div class="row">
+                <input
+                  class="input"
+                  type="text"
+                  name="name"
+                  placeholder="お名前"
+                  required
+                />
+                <input
+                  class="input"
+                  type="email"
+                  name="email"
+                  id=""
+                  placeholder="Eメールアドレス"
+                  required
+                />
+              </div>
+              <input
+                class="input"
+                type="text"
+                name="title"
+                id=""
+                placeholder="件名"
+                required
+              />
+              <textarea
+                class="input"
+                name="text"
+                id=""
+                cols="30"
+                rows="10"
+                placeholder="内容"
+                required
+              ></textarea>
+              <input type="submit" value="送信" />
+            </form>
+          </div>
+        </section>
+      </main>
+      <!-- フッター部分 -->
+      <footer>
+        <div class="inner footer_inner">
+          <small>© 2020 SORA inc.</small>
+          <ul class="row">
+            <li>
+              <a href=""><i class="fab fa-fw fa-twitter"></i></a>
+            </li>
+            <li>
+              <a href=""><i class="fab fa-fw fa-instagram"></i></a>
+            </li>
+            <li>
+              <a href=""><i class="fab fa-fw fa-facebook-square"></i></a>
+            </li>
+          </ul>
+        </div>
+      </footer>
+    </div>
+    <!-- swiper -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <script src="js/main.js"></script>
+    <script src="js/swiper.js"></script>
+    <script src="js/io.js"></script>
+  </body>
+</html>

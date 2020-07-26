@@ -1,0 +1,288 @@
+@import "mixin";
+// 共通
+$white: #fff;
+$grey: #ddd;
+$black: #444;
+html {
+  margin-top: 96px;
+}
+body {
+  font-size: 16px;
+  letter-spacing: 1px;
+  line-height: 1;
+}
+* {
+  color: $black;
+  margin: 0;
+}
+.inner {
+  width: 90%;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.row {
+  display: flex;
+}
+.grid {
+  display: grid;
+}
+// ヘッダー
+header {
+  height: 96px;
+  position: fixed;
+  width: 100%;
+  padding-left: 16px;
+  top: 0;
+  background-color: $black;
+  color: $grey;
+  z-index: 10000;
+  .site_title {
+    color: $grey;
+    display: inline-block;
+    font-size: 1.5rem;
+    line-height: 96px;
+    margin: 0;
+    margin-left: 24px;
+  }
+  .nav {
+    float: right;
+    & > li {
+      margin-left: 8px;
+      &:first-child {
+        margin-left: 0;
+      }
+      & a {
+        color: $grey;
+        padding: calc((94px - 1em) / 2) 24px;
+        &:hover {
+          background-color: $grey;
+          color: $black;
+        }
+      }
+    }
+  }
+  .hum_btn {
+    display: none;
+  }
+  .menu {
+    .side_menu {
+      display: block;
+      width: 80%;
+      height: calc(100vh - 96px);
+      position: fixed;
+      right: 0;
+      top: 96px;
+      background-color: rgba(255, 255, 255, 0.616);
+      z-index: 999;
+      padding: 48px;
+      transform: translateX(100%);
+      overflow: hidden;
+      transition: 1s ease-in-out;
+      li {
+        cursor: pointer;
+        height: 48px;
+        width: 100%;
+        margin-bottom: 32px;
+        a {
+          line-height: 48px;
+          width: 100%;
+          text-align: center;
+        }
+
+        &:hover {
+          background-color: $black;
+
+          a {
+            color: $white;
+          }
+        }
+      }
+    }
+  }
+}
+// メイン
+.contents_title {
+  border-top: 2px solid $black;
+  margin-bottom: 32px;
+  padding: 48px 0 0 10%;
+  font-size: 2rem;
+}
+
+.container {
+  margin-bottom: 128px;
+  transform: translateX(-100%);
+  opacity: 0;
+  transition: opacity 3s ease-out, transform 1s ease-in-out;
+  &.inview {
+    transform: none;
+    opacity: 1;
+  }
+}
+// メインイメージ
+.swiper-container {
+  max-width: 100%;
+  margin: 0 auto 0;
+  max-height: 500px;
+  .swiper-slide {
+    height: 500px;
+    overflow: hidden;
+    img {
+      width: 100%;
+      max-width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transform: scale(1.3);
+      transition: transform 1.9s ease;
+    }
+    &-active {
+      & > img {
+        transform: none;
+      }
+      & .hero__title {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+      }
+    }
+  }
+}
+.hero {
+  &__title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, calc(-50% + 20px));
+    color: $white;
+    font-size: 25px;
+    z-index: 999;
+    width: 400px;
+    text-align: center;
+    height: 40px;
+    opacity: 0;
+    transition: opacity 0.3s ease 1s, transform 0.3s ease 1s;
+  }
+  &__footer {
+    position: absolute;
+    left: 50%;
+    bottom: 20px;
+    transform: translateX(-50%);
+    z-index: 2;
+    height: 68px;
+    width: 22px;
+    overflow: hidden;
+  }
+  &__downarrow {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 6px;
+    @include animation(
+      $name: kf-arrow-anime,
+      $iteration-count: infinite,
+      $duration: 2s,
+      $timing-function: linear
+    );
+  }
+  &__scrolltext {
+    position: absolute;
+    transform: rotate(90deg);
+    color: rgba(255, 255, 255, 0.7);
+    left: -8px;
+    top: 11px;
+    font-size: 0.8em;
+  }
+}
+
+@keyframes kf-arrow-anime {
+  0%,
+  50%,
+  100% {
+    transform: translateY(-10%);
+  }
+  30% {
+    transform: none;
+  }
+}
+
+// アバウト
+#about {
+  .context {
+    padding: 8px 5%;
+  }
+  h4 {
+    font-size: 1.2rem;
+  }
+  p {
+    margin-left: 16px;
+    line-height: 1.5;
+  }
+}
+.sora_iamge {
+  img {
+    width: 100%;
+  }
+}
+// スキル
+#skill {
+  h5 {
+    font-size: 1.4rem;
+    margin: 8px 0;
+  }
+  .skill_content {
+    margin-top: 32px;
+  }
+  .grid_skill {
+  }
+  i {
+    font-size: 3rem;
+    margin-right: 8px;
+  }
+}
+// コンタクト
+#contact {
+  form {
+    width: 100%;
+  }
+  .input {
+    padding: 8px;
+    width: 100%;
+    display: block;
+    margin-bottom: 32px;
+  }
+  input[type="submit"] {
+    display: block;
+    width: 150px;
+    margin: 0 auto;
+  }
+}
+// フッター
+footer {
+  background-color: $black;
+  color: $white;
+  height: 96px;
+
+  .footer_inner {
+    text-align: center;
+    padding: 26px 0;
+  }
+  ul {
+    justify-content: center;
+    padding: 0;
+  }
+
+  small,
+  i {
+    color: $white;
+  }
+  i {
+    margin: 8px 8px 0;
+  }
+}
+
+@media screen and (max-width: 896px) {
+  @import "breakpoints/896up";
+}
+
+@media screen and (max-width: 480px) {
+  @import "breakpoints/480up";
+}

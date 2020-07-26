@@ -1,0 +1,55 @@
+body {
+  font-size: 14px;
+}
+
+header {
+  .nav {
+    display: none;
+  }
+  .hum_btn {
+    cursor: pointer;
+    position: absolute;
+    right: 16px;
+    top: 15px;
+    display: block;
+    width: 64px;
+    height: 64px;
+    .hum_bar {
+      transition: 0.5s ease-in-out;
+      position: absolute;
+      top: 50%;
+      content: "";
+      width: 64px;
+      height: 5px;
+      background-color: #fff;
+      &:first-child {
+        top: calc(50% - 18px);
+      }
+      &:last-child {
+        bottom: 0;
+        top: calc(50% + 18px);
+      }
+    }
+  }
+
+  .menu.is_open {
+    .hum_btn .hum_bar {
+      transition: 0.5s ease-in-out;
+      top: 50%;
+
+      &:nth-child(1) {
+        transform: rotate(135deg);
+      }
+      &:nth-child(2) {
+        transform: translateX(100%);
+        opacity: 0;
+      }
+      &:nth-child(3) {
+        transform: rotate(-135deg);
+      }
+    }
+    .side_menu {
+      transform: none;
+    }
+  }
+}
