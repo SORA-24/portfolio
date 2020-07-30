@@ -842,3 +842,30 @@
       ? (module.exports = j)
       : D.startOnPageLoad && j.start();
 }.call(this));
+
+var initDestroyTimeOutPace = function () {
+  var counter = 0;
+  var refreshIntervalId = setInterval(function () {
+    var progress;
+    if (
+      typeof document
+        .querySelector(".pace-progress")
+        .getAttribute("data-progress-text") !== "undefined"
+    ) {
+      progress = Number(
+        document
+          .querySelector(".pace-progress")
+          .getAttribute("data-progress-text")
+          .replace("%", "")
+      );
+    }
+    if (progress === 99) {
+      counter++;
+    }
+    if (counter > 50) {
+      clearInterval(refreshIntervalId);
+      Pace.stop();
+    }
+  }, 100);
+};
+initDestroyTimeOutPace();
