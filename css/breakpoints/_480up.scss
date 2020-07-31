@@ -1,9 +1,31 @@
 body {
-  font-size: 10px;
+  font-size: 15px;
 }
 .container {
   margin-bottom: 48px;
 }
 .contents_title {
   font-size: 1.5rem;
+}
+#header {
+  .site_title {
+    font-size: 1.2rem !important;
+  }
+}
+
+#about {
+  h4 {
+    margin-bottom: 8px;
+  }
+  .row {
+    display: block;
+  }
+}
+#work {
+  .work_container {
+    display: block;
+  }
+  .work_item {
+    width: 100%;
+  }
 }
