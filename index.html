@@ -28,6 +28,10 @@
 
           if (counter > 50) {
             clearInterval(refreshIntervalId);
+            document.body.className = "pace-done";
+            document
+              .querySelectorAll("pace")
+              .ClassList.replace("pace-active", "pace-inactive");
             Pace.stop();
           }
         }, 100);
