@@ -156,7 +156,7 @@ header {
     color: $white;
     font-size: 25px;
     z-index: 999;
-    width: 400px;
+    width: 100%;
     text-align: center;
     height: 40px;
     opacity: 0;
@@ -232,8 +232,7 @@ header {
   .skill_content {
     margin-top: 32px;
   }
-  .grid_skill {
-  }
+
   i {
     font-size: 3rem;
     margin-right: 8px;

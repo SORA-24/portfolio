@@ -183,7 +183,7 @@ header .menu .side_menu li:hover a {
   color: #fff;
   font-size: 25px;
   z-index: 999;
-  width: 400px;
+  width: 100%;
   text-align: center;
   height: 40px;
   opacity: 0;
