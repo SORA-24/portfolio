@@ -362,6 +362,11 @@ header .menu .side_menu li:hover a {
   transition: all 0.2s 0.8s ease-in;
 }
 
+#contact .mail_box {
+  margin-bottom: 32px;
+  line-height: 1.5;
+}
+
 #contact form {
   width: 100%;
 }
