@@ -33,9 +33,8 @@ body {
 header {
   height: 96px;
   position: fixed;
-  width: 100%;
-  padding-left: 16px;
   top: 0;
+  width: 100%;
   background-color: #444;
   color: #ddd;
   z-index: 10000;
@@ -47,7 +46,7 @@ header .site_title {
   font-size: 1.5rem;
   line-height: 96px;
   margin: 0;
-  margin-left: 24px;
+  margin-left: 36px;
 }
 
 header .nav {
@@ -136,6 +135,10 @@ header .menu .side_menu li:hover a {
   -webkit-transform: none;
           transform: none;
   opacity: 1;
+}
+
+#global_container {
+  overflow: hidden;
 }
 
 .swiper-container {
@@ -486,6 +489,10 @@ footer i {
   }
   #about .row {
     display: block;
+  }
+  #about .row .sora_iamge {
+    width: 30%;
+    padding-left: 5%;
   }
   #work .work_container {
     display: block;
