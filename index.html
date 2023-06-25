@@ -6,6 +6,38 @@
     <title>SORA'S SITE</title>
     <!-- pace -->
     <script src="js/pace.js"></script>
+    <script>
+      var initDestroyTimeOutPace = function () {
+        var counter = 0;
+
+        var refreshIntervalId = setInterval(function () {
+          var progress;
+
+          if (
+            typeof $(".pace-progress").attr("data-progress-text") !==
+            "undefined"
+          ) {
+            progress = Number(
+              $(".pace-progress").attr("data-progress-text").replace("%", "")
+            );
+          }
+
+          if (progress === 99) {
+            counter++;
+          }
+
+          if (counter == 100) {
+            clearInterval(refreshIntervalId);
+            document.body.className = "pace-done";
+            document
+              .querySelectorAll("pace")
+              .ClassList.replace("pace-active", "pace-inactive");
+            Pace.stop(); 
+          }
+        }, 100);
+      };
+      initDestroyTimeOutPace();
+    </script>
     <link rel="stylesheet" href="css/vendors/pace.css" />
     <!-- swiper -->
     <link
@@ -30,7 +62,6 @@
 
     <!-- style -->
     <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/mainimage.css" />
     <!-- jQery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   </head>
@@ -46,6 +77,7 @@
             <li><a href="#skill">SKILE</a></li>
             <li><a href="#work">WORK</a></li>
             <li><a href="#contact">CONTACT</a></li>
+            <li><a href="./grid_study.html">GRID</a></li>
           </ul>
           <div class="menu">
             <div class="hum_btn">
@@ -59,6 +91,7 @@
               <li class="link_btn"><a href="#skill">SKILE</a></li>
               <li class="link_btn"><a href="#work">WORK</a></li>
               <li class="link_btn"><a href="#contact">CONTACT</a></li>
+              <li class="link_btn"><a href="./grid_study.html">GRID</a></li>
             </ul>
           </div>
         </div>
@@ -77,25 +110,25 @@
                     <!-- それぞれのスライドの div 要素 -->
                     <div class="swiper-slide">
                       <div class="hero__title">SORA'S Portfolio</div>
-                      <img src="/portfolio/images/mainimage1.jpeg" alt="" />
+                      <img src="./images/mainimage1.jpeg" alt="" />
                     </div>
                     <div class="swiper-slide">
                       <div class="hero__title">こんにちわ</div>
-                      <img src="/portfolio/images/mainimage2.jpeg" alt="" />
+                      <img src="./images/mainimage2.jpeg" alt="" />
                     </div>
                     <div class="swiper-slide">
                       <div class="hero__title">西村空の自己紹介サイトです</div>
-                      <img src="/portfolio/images/mainimage3.jpeg" alt="" />
+                      <img src="./images/mainimage3.jpeg" alt="" />
                     </div>
                     <div class="swiper-slide">
                       <div class="hero__title">ようこそ</div>
-                      <img src="/portfolio/images/mainimage4.jpeg" alt="" />
+                      <img src="./images/mainimage4.jpeg" alt="" />
                     </div>
                   </div>
                   <div class="hero__footer">
                     <img
                       class="hero__downarrow"
-                      src="/portfolio/images/arrow.svg"
+                      src="./images/arrow.svg"
                       alt=""
                     />
                     <span class="hero__scrolltext">scroll</span>
@@ -109,15 +142,14 @@
           <h2 class="contents_title">ABOUT</h2>
           <div class="row inner">
             <div class="sora_iamge">
-              <img src="/portfolio/images/sora.jpeg" alt="" />
+              <img src="./images/sora.jpeg" alt="" />
             </div>
             <div class="context">
-              <h4>こんにちは！西村空と申します！</h4>
+              <h4>ようこそ！<br>西村 空(にしむら そら)の自己紹介サイトへ！</h4>
               <p>
                 鳥取県内にある商業高校を卒業後、公務員として5年間の勤務をしていました。ITがどんどん主流になっていく社会で、社会のため、会社のため、生活のために便利でより良いものを創っていきたいと思い、エンジニアを目指しています！様々な人のためになるサービスを作っていきたいと考えています！どんな案件でも誠心誠意対応させていただき、必ずご依頼主様に満足いただけるサービスを提供いたします。<br />
                 <span>
-                  趣味：カメラ撮影、サイクリング
-                  <a href="favorite">カメラ作品を見る</a>
+                ■趣味：読書、絵を描くこと、景色の写真撮影、ボルダリング（バイク：昔はバイク(隼)に乗っていたこともありました。）
                 </span>
               </p>
             </div>
@@ -126,7 +158,7 @@
         <!-- スキル部分 -->
         <section id="skill" class="container">
           <h2 class="contents_title">SKILL</h2>
-          <div class="row inner grid grid_skill">
+          <div class="inner">
             <div class="skill_content">
               <h5><i class="fas fa-fw fa-code"></i>HTML,CSS</h5>
               <p>保守性の高いコードを心掛けでいます！日々成長しています！</p>
@@ -150,12 +182,9 @@
             </div>
 
             <div class="skill_content">
-              <h5>
-                <i class="fas fa-fw fa-keyboard"></i>
-                etc..
-              </h5>
-              <p>
-                Github,git,Sass,MySQL,phpmyadmin,docker,Linux,vps,AWSなどを使用してきました！
+              <h5><i class="fas fa-fw fa-keyboard"></i>etc..</h5>
+              <p style="word-wrap: break-word;">
+                Github,git,Sass,MySQL,phpmyadmin,docker,Linux,vps,AWSなどを使用してきました
               </p>
             </div>
           </div>
@@ -163,20 +192,36 @@
         <!-- ワーク部分 -->
         <section id="work" class="container">
           <h2 class="contents_title">WORK</h2>
-          <div class="inner row">
-            <div>
-              <h5>題名</h5>
-              <div>imageimage</div>
+          <div class="inner row work_container">
+            <!-- ECサイト -->
+            <div class="work_item">
+              <h5 class="work_title">Leather Shop</h5>
+              <img src="./images/leathershopimage.png" alt="" />
+              <a href="http://118.27.5.212:8080/ecsite/login.php" class="link">
+                <p class="link_title">click</p>
+              </a>
             </div>
-            <div>
-              <h5>題名</h5>
-              <div>imageimage</div>
+            <!-- 勤怠管理システム -->
+            <div class="work_item">
+              <h5 class="work_title">勤怠管理システム</h5>
+              <img src="./images/attendance_app.png" alt="" />
+              <a href="http://118.27.5.212:8000" class="link">
+                <p class="link_title">click</p>
+              </a>
             </div>
           </div>
         </section>
         <!-- コンタクト部分 -->
         <section id="contact" class="container">
           <h2 class="contents_title">CONTACT</h2>
+          <div class="inner mail_box">
+            お問い合わせは以下にお願いします（※コンタクトフォームは未実装なのでなにか気になることがあればメールでお願いします。）
+            <div>
+              <a href="mailto:nishimuraso311@gmail.com?subject=お問い合わせ"
+                >メールで問い合わせる　←クリック</a
+              >
+            </div>
+          </div>
           <div class="inner row">
             <form method="post">
               <div class="row">

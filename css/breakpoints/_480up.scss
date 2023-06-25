@@ -1,9 +1,41 @@
 body {
-  font-size: 10px;
+  font-size: 15px;
 }
 .container {
   margin-bottom: 48px;
 }
 .contents_title {
   font-size: 1.5rem;
+}
+#header {
+  .site_title {
+    font-size: 1.2rem !important;
+  }
+}
+
+.inner{
+  margin:0;
+  width: 100%;
+}
+
+#about {
+  h4 {
+    margin-bottom: 8px;
+  }
+  .row {
+    display: block;
+    .sora_iamge{
+    width: 30%;
+    padding-left: 5%;
+    }
+  }
+}
+#work {
+  .work_container{
+    flex-direction:column;
+  }
+  
+  .work_item {
+    width: 100%;
+  }
 }

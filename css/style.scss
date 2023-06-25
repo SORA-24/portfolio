@@ -11,6 +11,7 @@ body {
   letter-spacing: 1px;
   line-height: 1;
 }
+
 * {
   color: $black;
   margin: 0;
@@ -31,9 +32,8 @@ body {
 header {
   height: 96px;
   position: fixed;
-  width: 100%;
-  padding-left: 16px;
   top: 0;
+  width: 100%;
   background-color: $black;
   color: $grey;
   z-index: 10000;
@@ -43,7 +43,7 @@ header {
     font-size: 1.5rem;
     line-height: 96px;
     margin: 0;
-    margin-left: 24px;
+    margin-left: 36px;
   }
   .nav {
     float: right;
@@ -120,6 +120,9 @@ header {
   }
 }
 // メインイメージ
+#global_container{
+overflow: hidden;
+}
 .swiper-container {
   max-width: 100%;
   margin: 0 auto 0;
@@ -155,7 +158,7 @@ header {
     color: $white;
     font-size: 25px;
     z-index: 999;
-    width: 400px;
+    width: 100%;
     text-align: center;
     height: 40px;
     opacity: 0;
@@ -231,15 +234,73 @@ header {
   .skill_content {
     margin-top: 32px;
   }
-  .grid_skill {
-  }
+
   i {
     font-size: 3rem;
     margin-right: 8px;
   }
 }
+// ワーク
+.work_container {
+  justify-content: space-between;
+  display: flex;
+}
+.work_item {
+  width: 40%;
+  position: relative;
+  overflow: hidden;
+  padding: 24px 40px;
+  .work_title {
+    font-size: 1.5rem;
+    margin-bottom: 18px;
+  }
+  img {
+    width: 100%;
+    transition: 0.2s ease-in;
+  }
+  .link {
+    position: absolute;
+    display: block;
+    z-index: 2;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    transition: all 0.5s ease-in-out;
+    & .link_title {
+      color: $white;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -60%);
+      opacity: 0;
+      transition: all 0.1s ease-in;
+    }
+  }
+  &:hover {
+    img {
+      transform: scale(1.1);
+    }
+    .link {
+      transform: translateX(100%);
+      opacity: 1;
+      & .link_title {
+        transform: translate(-50%, -50%);
+        opacity: 1;
+        transition: all 0.2s 0.8s ease-in;
+      }
+    }
+  }
+}
+
 // コンタクト
 #contact {
+  .mail_box {
+    margin-bottom: 32px;
+    line-height: 1.5;
+  }
   form {
     width: 100%;
   }
