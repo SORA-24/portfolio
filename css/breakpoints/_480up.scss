@@ -13,6 +13,11 @@ body {
   }
 }
 
+.inner{
+  margin:0;
+  width: 100%;
+}
+
 #about {
   h4 {
     margin-bottom: 8px;
@@ -26,9 +31,10 @@ body {
   }
 }
 #work {
-  .work_container {
-    display: block;
+  .work_container{
+    flex-direction:column;
   }
+  
   .work_item {
     width: 100%;
   }

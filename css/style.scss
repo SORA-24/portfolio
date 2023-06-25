@@ -243,9 +243,10 @@ overflow: hidden;
 // ワーク
 .work_container {
   justify-content: space-between;
+  display: flex;
 }
 .work_item {
-  width: 300px;
+  width: 40%;
   position: relative;
   overflow: hidden;
   padding: 24px 40px;

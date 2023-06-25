@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>grid_study_page</title>
+  <!-- reset -->
+  <link rel="stylesheet" href="css/reset.css" />
+  <!-- fontAwsome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css"
+    integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous" />
+  <!-- font-->
+  <link href="https://fonts.googleapis.com/css2?family=Sawarabi+Mincho&display=swap" rel="stylesheet" />
+
+  <!-- style -->
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css\grid.css" />
+  <!-- jQery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+
+<body>
+  <!-- ヘッダー コンポーネント化が可能 -->
+  <header id="header">
+    <div class="header_innner">
+      <h1 class="site_title">SORA'S SITE</h1>
+      <ul class="nav row">
+        <li><a href="./index.html">HOME</a></li>
+        <li><a href="./index.html?#about">ABOUT</a></li>
+        <li><a href="./index.html?#skill">SKILE</a></li>
+        <li><a href="./index.html?#work">WORK</a></li>
+        <li><a href="./index.html?#contact">CONTACT</a></li>
+      </ul>
+      <!-- ハンバーガー -->
+      <div class="menu">
+        <div class="hum_btn">
+          <div class="hum_bar"></div>
+          <div class="hum_bar"></div>
+          <div class="hum_bar"></div>
+        </div>
+        <ul class="side_menu">
+          <li class="link_btn"><a href="./index.html">HOME</a></li>
+          <li class="link_btn"><a href="./index.html?#about">ABOUT</a></li>
+          <li class="link_btn"><a href="./index.html?#skill">SKILE</a></li>
+          <li class="link_btn"><a href="./index.html?#work">WORK</a></li>
+          <li class="link_btn"><a href="./index.html?#contact">CONTACT</a></li>
+        </ul>
+      </div>
+    </div>
+  </header>
+  <!-- グリッドの練習部分 -->
+  <section id="grid_study">
+    <div class="inner grid_home">
+      <div class="grid_title">Title</div>
+      <div class="grid_nav">Nav</div>
+      <div class="grid_items">
+        <ul class="items">
+          <li class="item">ItemA</li>
+          <li class="item">ItemB</li>
+          <li class="item">ItemC</li>
+          <li class="item">ItemD</li>
+          <li class="item">ItemE</li>
+          <li class="item">ItemF</li>
+          <li class="item">ItemG</li>
+          <li class="item">ItemH</li>
+          <li class="item">ItemI</li>
+          <li class="item">ItemJ</li>
+          <li class="item">ItemJ</li>
+          <li class="item">ItemJ</li>
+          <li class="item">ItemJ</li>
+          <li class="item">ItemJ</li>
+          <li class="item">ItemJ</li>
+          <li class="item">ItemJ</li>
+          <li class="item">ItemJ</li>
+          <li class="item">ItemJ</li>
+          <li class="item">ItemJ</li>
+          <li class="item">ItemJ</li>
+          <li class="item">ItemJ</li>
+          <li class="item">ItemJ</li>
+          <li class="item">ItemJ</li>
+          <li class="item">ItemJ</li>
+        </ul>
+      </div>
+      <div class="grid_nav_link">1 . 2 . 3 . 4</div>
+    </div>
+  </section>
+  <!-- フッター部分 コンポーネント化が可能-->
+  <footer>
+    <div class="inner footer_inner">
+      <small>© 2020 SORA inc.</small>
+      <ul class="row">
+        <li>
+          <a href=""><i class="fab fa-fw fa-twitter"></i></a>
+        </li>
+        <li>
+          <a href=""><i class="fab fa-fw fa-instagram"></i></a>
+        </li>
+        <li>
+          <a href=""><i class="fab fa-fw fa-facebook-square"></i></a>
+        </li>
+      </ul>
+    </div>
+  </footer>
+  </div>
+  <script src="js/main.js"></script>
+  <script src="js/swiper.js"></script>
+  <script src="js/io.js"></script>
+</body>
+
+</html>
